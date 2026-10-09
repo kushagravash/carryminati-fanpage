@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "path": "/", "title": "The Hub — Carry Archive" },
+    { "path": "/vault", "title": "Stream Vault — Carry Archive" },
+    { "path": "/submit", "title": "Fan Submit — Carry Archive" }
+  ]
+}
