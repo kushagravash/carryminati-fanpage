@@ -6,7 +6,7 @@
 - [x] Use semantic HTML, readable page titles/metadata, keyboard-operable controls, visible focus states, appropriate contrast, meaningful image alt text and reduced-motion support. Keep pages responsive and avoid horizontal overflow.
 
 ## 2. Researched creator content and design — complete
-- [x] Represent CarryMinati comedy/roast/sketch material, CarryisLive, music and group appearances using a centralized collection of 14 authentic official-channel uploads with working original links and real source thumbnails.
+- [x] Represent CarryMinati comedy/roast/sketch material, CarryisLive, music and group appearances using a centralized collection of 26 distinct official-channel uploads with working original links and real YouTube thumbnails.
 - [x] Include multiple verified creator/group appearances; identify individual collaborators only when the official title/source supports that credit. Do not invent statistics, dates, titles, credits, biographies or public opinion.
 - [x] Use the planned editorial design system: charcoal `#111114`, graphite `#202024`, warm white `#F5F3EF`, concrete `#99958F`, restrained vermilion `#C54432`, optional justified warm gold, and a Barlow Condensed / DM Sans type pairing. Avoid synthetic depictions, fake official logos, generic HUD/neon/glow, excessive motion and fictional community claims.
 - [x] Keep a readable card and title fallback if a thumbnail cannot load; all video cards link directly to their authentic original upload, not a re-hosted video or a fake embedded player.
@@ -15,10 +15,10 @@
 - [x] Establish CarryMinati/Ajey Nagar and the project's independent status immediately with a strong source-backed visual, headline, supporting line, Vault CTA and floating navigation.
 - [x] Provide an intentional scroll story for The Roaster, Collaborators/group work, CarryisLive, The Musician and the community invitation; use short selected intersection reveals without scroll hijacking, and respect reduced motion.
 - [x] Include working community links to the Vault and Fan Submit; show no fake comments, activity feeds or unsupported metrics.
-- [x] Play “Toh Kaise hai aaplog?” only from an explicitly activated, owner-supplied authorized local clip; never synthesize, clone or autoplay a voice. Since no authorized clip was supplied, show an honest official-channel fallback.
+- [x] Play the user-supplied “Toh Kaise hai aap log?” clip only after an explicit visitor click, with play/pause controls, accessible loading/error/end states and no autoplay, synthesis or voice cloning. Keep an honest fallback if a valid same-site audio path is not available.
 
 ## 4. Stream Vault — complete
-- [x] Show a curated, featured official upload and the 14-link collection with source-backed titles, channel identity, categories, original video links and verified collaborator notes.
+- [x] Show a curated, featured official upload and the 26-link collection with source-backed titles, channel identity, categories, original video links and verified collaborator notes.
 - [x] Functional `All`, `Roasts & Sketches`, `Collaborations`, `CarryisLive` and `Music` filters immediately update the results and URL; show the active category and an empty state where applicable.
 - [x] Provide concise search, subtle desktop hover/focus treatment and complete touch-device information without hover; do not integrate the YouTube API or imitate a player.
 

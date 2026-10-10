@@ -47,13 +47,14 @@ Do not publish the project via Manus if you intend to use your own Vercel deploy
 
 ## Content, assets and audio
 
-See [`CONTENT_SOURCES.md`](CONTENT_SOURCES.md) for the curated source list and official links. Video thumbnails are fetched from YouTube's official thumbnail host and each card links to its specific official upload. If a thumbnail fails, the card falls back to the channel and the verified title. No view counts, engagement stats or unverified individual collaboration credits are asserted.
+See [`CONTENT_SOURCES.md`](CONTENT_SOURCES.md) for all 26 distinct official video sources. Video thumbnails are fetched from YouTube's thumbnail host and each card links to its specific original upload. If a thumbnail fails, the card falls back to the channel and verified title. No view counts, engagement stats or unverified individual collaboration credits are asserted. The Hub hero now uses the official `MR BEAST PARODY 🤑 Ft. INDIAN CREATORS | CARRYMINATI` thumbnail, with a responsive crop and fallback.
 
-Fonts use Barlow Condensed and DM Sans with system fallbacks. The Hub's sound control stays a link to the official channel until the owner supplies a genuine recording they are authorized to use. To enable local playback, place the authorized clip at (for example) `public/audio/carryminati-intro.mp3` and set `VITE_SIGNATURE_AUDIO_SRC=/audio/carryminati-intro.mp3`. Audio is never synthesized, cloned or played automatically. No voice recording is included in this export.
+Fonts use Barlow Condensed and DM Sans with system fallbacks. The Hub includes the brief `Toh kaise hai aap log?` clip supplied in the website-update bundle, converted to MP3 at `public/audio/carryminati-intro.mp3`; the default browser path works without another environment variable. Playback begins only after a visitor activates the play control, supports pause, and reports loading, failure and ended states. The site does not synthesize, clone or autoplay speech. The clip was supplied by the project owner; confirm that you have permission to include it in a public deployment. To replace it with another authorized same-site file, set `VITE_SIGNATURE_AUDIO_SRC` to its root-relative public path. If that value is invalid, the control offers an official-channel fallback.
 
 ## Project files
 
-- `src/data/videos.ts` — centralized 14-entry archive dataset, verification notes and original links.
+- `src/data/videos.ts` — centralized 26-entry official-video archive dataset, verification notes and original links.
+- `public/audio/carryminati-intro.mp3` — short user-supplied clip used by the opt-in Hub audio control.
 - `src/pages/` — route-level Hub, Vault and Submit UI.
 - `src/components/` — shared navigation, card, reveal, audio and footer components.
 - `src/lib/` — route metadata, Supabase client and submission insert mapper.
@@ -64,7 +65,7 @@ Fonts use Barlow Condensed and DM Sans with system fallbacks. The Hub's sound co
 
 ## Verification status
 
-The TypeScript/Vite production build passes. The three routes and route manifest returned HTTP 200 on the preview; mobile and desktop layouts were visually inspected. The live filter was verified with `?category=music` and returned exactly three music entries. One marked integration-test submission was sent through the preview and verified as a pending row in Supabase, then that test row was removed. No production site has been deployed.
+The TypeScript/Vite production build passes. All 26 archive IDs resolve to the expected official uploader, their displayed titles match YouTube metadata, and all 26 thumbnail URLs return HTTP 200. `GET /`, `/vault`, `/submit`, `/manus-routes.json` and `/audio/carryminati-intro.mp3` return HTTP 200 on the preview. The preview showed four music entries, three collaborations, and a `WARRIOR` search result; mobile screenshots show one-column archive cards and the tablet breakpoint shows two columns. The Hub's user-supplied MP3 played to its 1.63-second end only after a visitor click; the button returned to idle. No browser-console messages or desktop horizontal overflow were observed. No production site has been deployed.
 
 ### Separate Supabase security-advisor note
 

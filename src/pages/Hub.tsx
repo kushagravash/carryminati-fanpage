@@ -7,7 +7,7 @@ import { VideoCard } from '../components/VideoCard';
 import { officialChannels, videos } from '../data/videos';
 import { setPageMeta } from '../lib/pageMeta';
 
-const hero = videos.find((video) => video.id === 'unemployment-on-peak')!;
+const hero = videos.find((video) => video.id === 'mr-beast-parody')!;
 const comedy = videos.filter((video) => video.category === 'comedy');
 const collabs = videos.filter((video) => video.category === 'collaboration');
 const live = videos.filter((video) => video.category === 'gaming');
@@ -29,9 +29,9 @@ export function HubPage() {
     <main className="page page--hub">
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__frame">
-          <div className="hero__image" aria-hidden="true">
+          <div className="hero__image hero__image--collaboration">
             {!heroFailed ? (
-              <img src={hero.thumbnailUrl} alt="" {...highPriorityImageHint} onError={() => setHeroFailed(true)} />
+              <img src={hero.thumbnailUrl} alt="CarryMinati featured with creators in the official Mr Beast parody thumbnail" {...highPriorityImageHint} onError={() => setHeroFailed(true)} />
             ) : (
               <div className="hero__fallback"><span className="eyebrow">OFFICIAL SOURCE</span><strong>{hero.title}</strong></div>
             )}

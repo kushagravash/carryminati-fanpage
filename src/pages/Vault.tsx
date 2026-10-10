@@ -51,7 +51,7 @@ export function VaultPage() {
         <div className="page-intro__index">02 <span>/</span> STREAM VAULT</div>
         <p className="eyebrow">THE CURATED ARCHIVE</p>
         <h1>THE<br /><em>ARCHIVE.</em></h1>
-        <div className="page-intro__foot"><p>Roasts. Streams. Music. Collaborations. The moments stay attached to their source.</p><span>14 VERIFIED SOURCE LINKS</span></div>
+        <div className="page-intro__foot"><p>Roasts. Streams. Music. Collaborations. The moments stay attached to their source.</p><span>{videos.length} VERIFIED SOURCE LINKS</span></div>
       </section>
 
       <section className="vault-content" aria-label="Video archive">
